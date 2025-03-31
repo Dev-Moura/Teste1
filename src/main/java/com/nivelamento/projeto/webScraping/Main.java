@@ -1,4 +1,4 @@
-package com.nivelamento.projeto.webscraping;
+package com.nivelamento.projeto.webScraping;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
