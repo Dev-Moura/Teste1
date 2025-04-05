@@ -85,3 +85,162 @@ projeto/
 |   |   ├── Rol_Procedimentos.csv
 └── README.md
 ```
+
+# Teste 3 — Análise de Despesas das Operadoras de Saúde
+
+Este projeto tem como objetivo importar, tratar e analisar os dados financeiros das operadoras de saúde suplementar, utilizando PostgreSQL e dados disponibilizados pela ANS (Agência Nacional de Saúde Suplementar).
+
+## 🗂️ Dados Utilizados
+
+- **Demonstrativos Contábeis Trimestrais**
+  - Arquivo: `1T2024.csv`, `4T2024.csv`, etc.
+  - Campos: `data`, `cd_conta_contabil`, `cd_operadora`, `ds_conta_contabil`, `vl_saldo_final`, `vl_saldo_anterior`
+
+- **Cadastro de Operadoras Ativas**
+  - Arquivo: `Relatorio_cadop.csv`
+  - Campos: `registro_ans`, `razao_social`, `nome_fantasia`, `cnpj`, `endereço`, `contato`, entre outros
+
+
+## 🛠️ Estrutura do Banco de Dados
+
+
+
+#  Teste 4  Busca de Operadoras de Saúde - Vue.js + Flask
+
+Este projeto implementa uma interface web para realizar buscas textuais em uma base de operadoras de saúde usando **Vue 3 com TypeScript** no frontend e **Flask (Python)** no backend. A busca é feita em um arquivo CSV carregado previamente.
+
+---
+
+## 📦 Tecnologias Utilizadas
+
+### Frontend
+- [Vue 3](https://vuejs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Axios](https://axios-http.com/)
+
+### Backend
+- [Flask](https://flask.palletsprojects.com/)
+- [Pandas](https://pandas.pydata.org/)
+- [Flask-CORS](https://flask-cors.readthedocs.io/)
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+projeto-busca-operadoras/
+├── backend/
+│   ├── app.py
+│   └── operadoras.csv
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── Search.vue
+│   │   └── App.vue
+│   └── vite.config.ts
+│
+├── README.md
+└── postman_collection.json
+```
+
+---
+
+## ▶️ Como Executar o Projeto
+
+### 🔧 Backend (Flask)
+
+1. Navegue até a pasta `backend/`:
+
+   ```bash
+   cd backend
+   ```
+
+2. Instale as dependências:
+
+   ```bash
+   pip install flask pandas flask-cors
+   ```
+
+3. Inicie o servidor:
+
+   ```bash
+   python app.py
+   ```
+
+> ⚠️ O arquivo `operadoras.csv` deve estar na mesma pasta que `app.py`.
+
+---
+
+### 💻 Frontend (Vue 3 + TypeScript)
+
+1. Navegue até a pasta `frontend/`:
+
+   ```bash
+   cd frontend
+   ```
+
+2. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor:
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 🌐 Endpoint da API
+
+| Método | Rota         | Descrição                         |
+|--------|--------------|-----------------------------------|
+| GET    | `/search`    | Busca textual por operadoras.     |
+
+### Exemplo de Requisição:
+
+```http
+GET http://localhost:5000/search?query=amil
+```
+
+### Exemplo de Resposta:
+
+```json
+[
+  {
+    "registro_ans": 12345,
+    "razao_social": "AMIL ASSISTÊNCIA MÉDICA INTERNACIONAL",
+    "nome_fantasia": "AMIL"
+  }
+]
+```
+
+---
+
+## 📬 Coleção Postman
+
+Uma coleção pronta para testar a API está no arquivo:
+
+```
+postman_collection.json
+```
+
+Você pode importar no Postman diretamente para testar a busca.
+
+---
+
+## 🛠️ Melhorias Futuras
+
+- Paginação dos resultados.
+- Filtro por cidade, estado ou CNPJ.
+- Upload do CSV via frontend.
+
+---
+
+## 🧑‍💻 Autor
+
+
+
