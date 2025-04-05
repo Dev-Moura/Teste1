@@ -240,7 +240,8 @@ Você pode importar no Postman diretamente para testar a busca.
 
 ---
 
-## 🧑‍💻 Autor
+### Autor
+[<img loading="lazy" src="https://avatars.githubusercontent.com/u/113400472?v=4&size=320" width=115><br><sub>Michael Moura</sub>](https://github.com/Dev-Moura/Dev-Moura)
 
 
 
